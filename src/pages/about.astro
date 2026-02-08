@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import ProfileImage from '../assets/profile.jpg';
 import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
 import Layout from '../layouts/BlogPost.astro';
 ---
@@ -9,6 +11,17 @@ import Layout from '../layouts/BlogPost.astro';
 	pubDate={new Date()}
 	heroImage={AboutHeroImage}
 >
+	<div style="display:flex;justify-content:center;margin:1rem 0 1.5rem 0;">
+		<Image
+			src={ProfileImage}
+			alt="Portrait of Roland Kákonyi"
+			width={200}
+			height={200}
+			loading="eager"
+			style="border-radius:999px;box-shadow:var(--box-shadow);"
+		/>
+	</div>
+
 	<p>
 		I’m Roland Kákonyi, a Senior Software Engineer in Vienna focused on media technology and developer
 		platforms. I build high‑performance video playback experiences and SDKs across Apple platforms

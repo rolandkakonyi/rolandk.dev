@@ -1,10 +1,13 @@
 ---
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+import ProfileImage from '../assets/profile.jpg';
 
 const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -24,6 +27,16 @@ const posts = (await getCollection('blog'))
 			}
 			.hero {
 				margin: 1.5rem 0 2rem 0;
+				text-align: center;
+			}
+			.profile {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1rem;
+			}
+			.profile :global(img) {
+				border-radius: 999px;
+				box-shadow: var(--box-shadow);
 			}
 			.hero h1 {
 				margin: 0 0 0.75rem 0;
@@ -81,6 +94,16 @@ const posts = (await getCollection('blog'))
 		<Header />
 		<main>
 			<section class="hero">
+				<div class="profile">
+					<Image
+						src={ProfileImage}
+						alt="Portrait of Roland Kákonyi"
+						width={160}
+						height={160}
+						loading="eager"
+						decoding="async"
+					/>
+				</div>
 				<h1>Roland Kákonyi</h1>
 				<p class="lede">
 					Senior Software Engineer in Vienna building video players, SDKs, and AI-driven media
