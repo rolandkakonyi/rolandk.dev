@@ -5,6 +5,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import ThemeProvider from '../components/ThemeProvider.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 import ProfileImage from '../assets/profile.jpg';
@@ -16,6 +17,7 @@ const posts = (await getCollection('blog'))
 
 <!doctype html>
 <html lang="en">
+	<ThemeProvider />
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>

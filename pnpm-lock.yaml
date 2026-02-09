@@ -23,6 +23,10 @@ importers:
       sharp:
         specifier: ^0.34.3
         version: 0.34.5
+    devDependencies:
+      astro-themes:
+        specifier: ^0.2.7
+        version: 0.2.7(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3))
 
 packages:
 
@@ -620,6 +624,11 @@ packages:
   astring@1.9.0:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
+
+  astro-themes@0.2.7:
+    resolution: {integrity: sha512-HJAQx0QRCMd3Jn4nzYSYAYC1PwGjCVz0DPX7/+8kMZ3/ut2MWgVDSc4k9WTzlcp1ftBfjnqxZhf/vYlu0aJ8ag==}
+    peerDependencies:
+      astro: '*'
 
   astro@5.17.1:
     resolution: {integrity: sha512-oD3tlxTaVWGq/Wfbqk6gxzVRz98xa/rYlpe+gU2jXJMSD01k6sEDL01ZlT8mVSYB/rMgnvIOfiQQ3BbLdN237A==}
@@ -2167,6 +2176,10 @@ snapshots:
   array-iterate@2.0.1: {}
 
   astring@1.9.0: {}
+
+  astro-themes@0.2.7(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3)):
+    dependencies:
+      astro: 5.17.1(rollup@4.57.1)(typescript@5.9.3)
 
   astro@5.17.1(rollup@4.57.1)(typescript@5.9.3):
     dependencies:
