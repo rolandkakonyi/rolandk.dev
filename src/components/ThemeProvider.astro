@@ -1,5 +1,41 @@
 ---
-import Themes from 'astro-themes';
 ---
 
-<Themes />
+<script is:inline>
+  const getTheme = () => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  };
+
+  const theme = getTheme();
+  
+  if (theme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  window.localStorage.setItem('theme', theme);
+
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    const currentTheme = element.getAttribute('data-theme');
+    const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    element.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
+  };
+
+  document.addEventListener('astro:after-swap', () => {
+    const theme = localStorage.getItem('theme') ?? 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  });
+  
+  // Expose toggle function globally for the button
+  window.handleThemeToggle = handleToggleClick;
+</script>
