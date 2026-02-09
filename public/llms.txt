@@ -1,0 +1,39 @@
+# Roland Kákonyi - Personal Site
+
+## About
+Senior Software Engineer in Vienna building video players and SDKs for iOS/tvOS/watchOS and React Native, plus AI-driven media workflows. Expert in Vertex AI and Google Agent Development Kit (ADK). Lately I’ve been leaning into agentic engineering (since mid‑2025) as part of how I build.
+
+## Core Skills
+- Video Playback & Streaming (HLS, FairPlay Streaming)
+- Apple Platforms (iOS, tvOS, watchOS, Objective-C, Swift)
+- React Native & Mobile SDKs
+- AI/ML Engineering (Vertex AI, Google ADK, Agentic Workflows)
+- Backend & DevOps (Python, Node.js, Cloud Infrastructure)
+
+## Experience
+
+### Bitmovin (Apr 2020 – Present)
+Senior Software Engineer
+- AI-driven video workflows (Scene Analysis, recognition/segmentation)
+- Apple Player SDK (iOS/tvOS/watchOS)
+- React Native Player SDK lead
+- HLS & FairPlay Streaming expert
+
+### Mimo (Jun 2019 – Mar 2020)
+iOS Developer
+- Educational app development, maintainability, UX focus.
+
+### E2 Communications GmbH (Aug 2014 – May 2019)
+Mobile Application Developer
+- iOS app development, custom push notification stack, CI/CD automation.
+
+### Webstar Csoport Kft. (2011 – 2014)
+iOS/Android/Software Developer
+- Mobile games (Cocos2d-x), EPUB3, Web/PHP, Linux server admin.
+
+## Links
+- Site: https://rolandk.dev
+- Blog: https://rolandk.dev/blog
+- GitHub: https://github.com/rolandkakonyi
+- LinkedIn: https://www.linkedin.com/in/roland-k%C3%A1konyi-1032b035/
+- Twitter: https://twitter.com/rolandkdev
