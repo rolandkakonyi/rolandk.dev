@@ -4,7 +4,7 @@ description: 'How I used OpenClaw + WhatsApp to ship rolandk.dev without opening
 pubDate: 'Feb 09 2026'
 ---
 
-I set up this personal site without ever opening my laptop. The whole thing was built from my phone, using OpenClaw as the helper and WhatsApp as the control surface.
+I set up this personal site without ever opening my laptop — while watching the Super Bowl. The whole thing was built from my phone, using OpenClaw as the helper and WhatsApp as the control surface.
 
 The process was surprisingly smooth: I could iterate on copy, layout, and details with quick feedback loops, and push updates as soon as something felt right. It felt closer to a conversation than a traditional “sit down and code” session — which made it easy to keep momentum.
 
