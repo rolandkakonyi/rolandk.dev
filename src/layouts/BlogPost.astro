@@ -7,9 +7,18 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import ThemeProvider from '../components/ThemeProvider.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+interface Props {
+	title: string;
+	description: string;
+	pubDate: Date;
+	updatedDate?: Date;
+	heroImage?: string;
+	showDate?: boolean;
+	nextPost?: CollectionEntry<'blog'>;
+	prevPost?: CollectionEntry<'blog'>;
+}
 
-const { title, description, pubDate, updatedDate, heroImage, showDate = true } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, showDate = true, nextPost, prevPost } = Astro.props;
 ---
 
 <html lang="en">
@@ -54,6 +63,33 @@ const { title, description, pubDate, updatedDate, heroImage, showDate = true } =
 			.last-updated-on {
 				font-style: italic;
 			}
+			.post-nav {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 4rem;
+				padding-top: 2rem;
+				border-top: 1px solid rgba(var(--gray), 20%);
+			}
+			.post-nav a {
+				text-decoration: none;
+				color: rgb(var(--accent));
+			}
+			.post-nav a:hover {
+				text-decoration: underline;
+			}
+			.post-nav .prev {
+				text-align: left;
+			}
+			.post-nav .next {
+				text-align: right;
+			}
+			.nav-label {
+				font-size: 0.8rem;
+				text-transform: uppercase;
+				color: rgb(var(--gray));
+				margin-bottom: 0.25rem;
+				display: block;
+			}
 		</style>
 	</head>
 
@@ -82,6 +118,27 @@ const { title, description, pubDate, updatedDate, heroImage, showDate = true } =
 						<hr />
 					</div>
 					<slot />
+					
+					{(prevPost || nextPost) && (
+						<nav class="post-nav">
+							<div class="prev">
+								{prevPost && (
+									<>
+										<span class="nav-label">Previous</span>
+										<a href={`/blog/${prevPost.id}/`}>← {prevPost.data.title}</a>
+									</>
+								)}
+							</div>
+							<div class="next">
+								{nextPost && (
+									<>
+										<span class="nav-label">Next</span>
+										<a href={`/blog/${nextPost.id}/`}>{nextPost.data.title} →</a>
+									</>
+								)}
+							</div>
+						</nav>
+					)}
 				</div>
 			</article>
 		</main>

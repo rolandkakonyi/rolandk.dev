@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { EXPERIENCE } from '../data/experience';
 
 const pageTitle = 'Experience';
 const pageDescription = 'Professional roles and educational background in software engineering and media technologies.';
@@ -7,71 +8,33 @@ const pageDescription = 'Professional roles and educational background in softwa
 
 <Layout title={pageTitle} description={pageDescription} pubDate={new Date()}>
 	<h2>Work Experience</h2>
-	<h2>Bitmovin — Senior Software Engineer</h2>
-	<p>Vienna, Austria · Apr 2020 – Present</p>
-	<ul>
-		<li>
-			Contribute across feature design, implementation, and production support for Bitmovin’s
-			AI‑driven Scene Analysis product (video recognition/segmentation workflows).
-		</li>
-		<li>
-			Develop and optimize Bitmovin Video Player solutions for Apple platforms (iOS/tvOS/watchOS),
-			with a focus on stability, performance, and integration quality.
-		</li>
-		<li>
-			Lead the React Native Player SDK to reduce integration effort for app teams and keep feature
-			parity with native player capabilities.
-		</li>
-		<li>
-			Subject matter expertise in HLS and FairPlay Streaming integrations.
-		</li>
-	</ul>
 
-	<h2>Mimo — iOS Developer</h2>
-	<p>Vienna, Austria · Jun 2019 – Mar 2020</p>
-	<ul>
-		<li>Delivered iOS features end-to-end with an emphasis on maintainability and user experience.</li>
-		<li>Partnered with product and design to iterate quickly while keeping quality high.</li>
-	</ul>
-
-	<h2>E2 Communications GmbH — Mobile Application Developer</h2>
-	<p>Vienna, Austria · Aug 2014 – May 2019</p>
-	<ul>
-		<li>Owned iOS app development from technical design through App Store release.</li>
-		<li>
-			Built a custom in-house push notification stack (sole contributor) serving web, iOS, and
-			Android applications across multiple products.
-		</li>
-		<li>Supported Android development and Play Store publishing.</li>
-		<li>
-			Reduced operational friction by building deployment/CI automation and internal tooling across
-			iOS, Android, Bash, and web.
-		</li>
-		<li>Onboarded and mentored junior developers (Git, clean code, debugging, agile practices).</li>
-		<li>
-			Coordinated development with an external contractor team (1 year) on a product with social,
-			community, and gamification features.
-		</li>
-	</ul>
-
-	<h2>Webstar Csoport Kft. — iOS/Android Developer</h2>
-	<p>Pécs, Hungary · Nov 2012 – May 2014</p>
-	<ul>
-		<li>Developed Android applications (Java/C/C++) and iOS applications (Objective‑C/Objective‑C++/C/C++).</li>
-		<li>Built interactive EPUB3 content for iBooks.</li>
-		<li>Worked on cross-platform mobile games using the Cocos2d‑x engine.</li>
-	</ul>
-
-	<h2>Webstar Csoport Kft. — Software Developer</h2>
-	<p>Pécs, Hungary · Jan 2011 – Oct 2012</p>
-	<ul>
-		<li>Built and maintained web applications and services (PHP/HTML5).</li>
-		<li>Designed and managed SQL and NoSQL databases.</li>
-		<li>Maintained Linux servers and supported production deployments.</li>
-	</ul>
+	{EXPERIENCE.map((job) => (
+		<div class="job-item">
+			<h3>{job.company} — {job.role}</h3>
+			<p class="job-meta">{job.location} · {job.dates}</p>
+			<ul>
+				{job.bullets.map((bullet) => (
+					<li>{bullet}</li>
+				))}
+			</ul>
+		</div>
+	))}
 
 	<h2>Education</h2>
 	
 	<h3>University of Pécs — BSc in Computer Science</h3>
-	<p>Pécs, Hungary · Graduated 2012</p>
+	<p class="job-meta">Pécs, Hungary · Graduated 2012</p>
 </Layout>
+
+<style>
+	.job-item {
+		margin-bottom: 2rem;
+	}
+	.job-meta {
+		font-style: italic;
+		color: rgb(var(--gray));
+		margin-top: -0.5rem;
+		margin-bottom: 1rem;
+	}
+</style>

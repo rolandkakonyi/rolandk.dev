@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { SOCIAL_LINKS } from '../consts';
 import ProfileImage from '../assets/profile.jpg';
 import Layout from '../layouts/BlogPost.astro';
 ---
@@ -56,14 +57,14 @@ import Layout from '../layouts/BlogPost.astro';
 	<h2>Contact</h2>
 	<ul>
 		<li>
-			Email: <a href="mailto:me@rolandk.dev">me@rolandk.dev</a>
+			Email: <a href={SOCIAL_LINKS.email}>me@rolandk.dev</a>
 		</li>
 		<li>
-			GitHub: <a href="https://github.com/rolandkakonyi" target="_blank" rel="me">github.com/rolandkakonyi</a>
+			GitHub: <a href={SOCIAL_LINKS.github} target="_blank" rel="me">github.com/rolandkakonyi</a>
 		</li>
 		<li>
 			LinkedIn:
-			<a href="https://www.linkedin.com/in/roland-k%C3%A1konyi-1032b035/" target="_blank" rel="me">
+			<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="me">
 				roland-kákonyi
 			</a>
 		</li>

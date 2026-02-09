@@ -7,6 +7,7 @@ import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import ThemeProvider from '../components/ThemeProvider.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SHORT_BIO } from '../data/bio';
 
 import ProfileImage from '../assets/profile.jpg';
 
@@ -107,12 +108,7 @@ const posts = (await getCollection('blog'))
 					/>
 				</div>
 				<h1>Roland Kákonyi</h1>
-				<p class="lede">
-					Senior Software Engineer in Vienna building video players and SDKs for iOS/tvOS/watchOS
-					and React Native, plus AI-driven media workflows. Expert in Vertex AI and Google Agent
-					Development Kit (ADK). Lately I’ve been leaning into agentic engineering (since mid‑2025)
-					as part of how I build.
-				</p>
+				<p class="lede">{SHORT_BIO}</p>
 				<div class="cta">
 					<a href="/about">About</a>
 					<a href="/experience">Experience</a>

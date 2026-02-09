@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, SOCIAL_LINKS } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 import ThemeToggle from './ThemeToggle.astro';
 ---
@@ -14,14 +14,8 @@ import ThemeToggle from './ThemeToggle.astro';
 			<HeaderLink href="/experience">Experience</HeaderLink>
 		</div>
 		<div class="social-links">
-			<a href="https://github.com/rolandkakonyi" target="_blank" rel="me">GitHub</a>
-			<a
-				href="https://www.linkedin.com/in/roland-k%C3%A1konyi-1032b035/"
-				target="_blank"
-				rel="me"
-			>
-				LinkedIn
-			</a>
+			<a href={SOCIAL_LINKS.github} target="_blank" rel="me">GitHub</a>
+			<a href={SOCIAL_LINKS.linkedin} target="_blank" rel="me">LinkedIn</a>
 			<ThemeToggle />
 		</div>
 	</nav>
