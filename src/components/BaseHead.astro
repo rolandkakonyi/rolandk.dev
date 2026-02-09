@@ -4,7 +4,7 @@
 import '../styles/global.css';
 import type { ImageMetadata } from 'astro';
 import FallbackImage from '../assets/blog-placeholder-about.jpg';
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, TWITTER_USERNAME } from '../consts';
 
 interface Props {
 	title: string;
@@ -52,7 +52,29 @@ const { title, description, image = FallbackImage } = Astro.props;
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" content={TWITTER_USERNAME} />
+<meta property="twitter:creator" content={TWITTER_USERNAME} />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+
+<script is:inline type="application/ld+json">
+	{
+		"@context": "https://schema.org/",
+		"@type": "Person",
+		"name": "Roland Kákonyi",
+		"url": "https://rolandk.dev",
+		"image": "https://rolandk.dev/profile.jpg",
+		"sameAs": [
+			"https://github.com/rolandkakonyi",
+			"https://www.linkedin.com/in/roland-k%C3%A1konyi-1032b035/",
+			"https://twitter.com/rolandkdev"
+		],
+		"jobTitle": "Senior Software Engineer",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "Bitmovin"
+		}
+	}
+</script>

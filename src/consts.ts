@@ -7,5 +7,8 @@ export const SITE_DESCRIPTION =
 export const SOCIAL_LINKS = {
 	github: 'https://github.com/rolandkakonyi',
 	linkedin: 'https://www.linkedin.com/in/roland-k%C3%A1konyi-1032b035/',
+	twitter: 'https://twitter.com/rolandkdev',
 	email: 'mailto:me@rolandk.dev',
 };
+
+export const TWITTER_USERNAME = '@rolandkdev';
