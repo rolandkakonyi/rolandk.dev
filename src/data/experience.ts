@@ -13,7 +13,7 @@ export const EXPERIENCE: ExperienceItem[] = [
 		location: 'Vienna, Austria',
 		dates: 'Apr 2020 – Present',
 		bullets: [
-			'Contribute across feature design, implementation, and production support for Bitmovin’s AI‑driven Scene Analysis product (video recognition/segmentation workflows).',
+			'Contribute across feature design, implementation, and production support for Bitmovin AI Scene Analysis (video recognition/segmentation workflows).',
 			'Develop and optimize Bitmovin Video Player solutions for Apple platforms (iOS/tvOS/watchOS), with a focus on stability, performance, and integration quality.',
 			'Lead the React Native Player SDK to reduce integration effort for app teams and keep feature parity with native player capabilities.',
 			'Subject matter expertise in HLS and FairPlay Streaming integrations.',
