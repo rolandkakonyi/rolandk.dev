@@ -5,12 +5,13 @@
  */
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
+	/* Subtle Seattle-inspired palette */
+	--accent: #69be28; /* Action Green */
+	--accent-dark: #3f8f1c;
+	--black: 16, 24, 40; /* Navy-leaning text */
+	--gray: 96, 108, 122;
+	--gray-light: 234, 238, 242;
+	--gray-dark: 34, 45, 66;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%), 0 16px 32px
@@ -19,19 +20,19 @@
 
 /* Dark mode colors */
 [data-theme="dark"] {
-	--accent: #6b75ff;
-	--accent-dark: #a2a8ff;
-	--black: 220, 220, 220;
-	--gray: 190, 200, 225;
-	--gray-light: 40, 46, 64;
-	--gray-dark: 230, 230, 230;
-	--gray-gradient: rgba(var(--gray-light), 50%), #161b22;
+	--accent: #7ed957;
+	--accent-dark: #b2ef8f;
+	--black: 226, 232, 240;
+	--gray: 172, 184, 198;
+	--gray-light: 30, 42, 64;
+	--gray-dark: 232, 236, 242;
+	--gray-gradient: rgba(var(--gray-light), 50%), #0f172a;
 	--box-shadow:
 		0 2px 6px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.4), 0 16px 32px
 		rgba(0, 0, 0, 0.4);
 	
 	color-scheme: dark;
-	background-color: #161b22 !important;
+	background-color: #0f172a !important;
 }
 
 [data-theme="dark"] body {
