@@ -38,6 +38,8 @@ const posts = (await getCollection('blog'))
 				margin-bottom: 1rem;
 			}
 			.profile :global(img) {
+				width: 160px;
+				height: auto;
 				border-radius: 999px;
 				box-shadow: var(--box-shadow);
 			}
@@ -101,8 +103,8 @@ const posts = (await getCollection('blog'))
 					<Image
 						src={ProfileImage}
 						alt="Portrait of Roland Kákonyi"
-						width={160}
-						height={160}
+						width={240}
+						height={320}
 						loading="eager"
 						decoding="async"
 					/>
