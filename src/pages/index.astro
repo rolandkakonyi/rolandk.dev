@@ -7,7 +7,6 @@ import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import ThemeProvider from '../components/ThemeProvider.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import { SHORT_BIO } from '../data/bio';
 
 import ProfileImage from '../assets/profile.jpg';
 
@@ -110,7 +109,9 @@ const posts = (await getCollection('blog'))
 					/>
 				</div>
 				<h1>Roland Kákonyi</h1>
-				<p class="lede">{SHORT_BIO}</p>
+				<p class="lede">
+					Senior Software Engineer in Vienna, Austria focused on AI workflows and production-grade agentic systems at <a href="https://bitmovin.com" target="_blank" rel="noopener noreferrer">Bitmovin</a>, where I also build video players and SDKs for iOS/tvOS/watchOS and React Native, with deep experience in HLS and FairPlay Streaming.
+				</p>
 				<div class="cta">
 					<a href="/about">About</a>
 					<a href="/experience">Experience</a>
