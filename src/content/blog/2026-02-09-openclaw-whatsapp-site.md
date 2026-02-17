@@ -4,10 +4,12 @@ description: 'How I used OpenClaw + WhatsApp to ship rolandk.dev without opening
 pubDate: 'Feb 09 2026'
 ---
 
-I set up this personal site without ever opening my laptop — while watching the Super Bowl. The whole thing was built from my phone, using [OpenClaw](https://openclaw.ai) as the helper and WhatsApp as the control surface.
+I shipped this site without opening my laptop.
+While watching the Super Bowl.
 
-The process was surprisingly smooth: I could iterate on copy, layout, and details with quick feedback loops, and push updates as soon as something felt right. The stack is simple and modern: [Astro](https://astro.build) + MDX with pnpm on Node 22, deployed on [Cloudflare Pages](https://pages.cloudflare.com). It felt closer to a conversation than a traditional “sit down and code” session — which made it easy to keep momentum.
+I did everything from my phone with [OpenClaw](https://openclaw.ai) in WhatsApp: tweak copy, check layout, make a change, push, repeat. No "I'll do it later when I'm at my desk." Just short loops until it felt right.
 
-The end result is exactly what I wanted: a clean, focused site with the right amount of personality, a clear professional narrative, and room to grow. This was also a nice reminder that good tooling can change how you ship things — not just how fast, but how comfortably.
+Under the hood it's [Astro](https://astro.build) + MDX on pnpm/Node 22, deployed to [Cloudflare Pages](https://pages.cloudflare.com). Nothing exotic. The unusual part was the workflow: it felt more like directing than coding.
 
-If you’re curious about this approach, I’m happy to share more. For now, I’m just glad it’s live.
+The result is what I wanted from a personal site: clear, minimal, and not trying too hard.
+Also: better tooling doesn't just make you faster. It changes when you're willing to ship.
