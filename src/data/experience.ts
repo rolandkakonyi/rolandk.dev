@@ -9,7 +9,7 @@ export interface ExperienceItem {
 export const EXPERIENCE: ExperienceItem[] = [
 	{
 		company: 'Bitmovin',
-		role: 'Senior Software Engineer',
+		role: 'Staff Software Engineer',
 		location: 'Vienna, Austria',
 		dates: 'Apr 2020 – Present',
 		bullets: [

@@ -1,7 +1,7 @@
 # Roland Kákonyi - Personal Site
 
 ## About
-Senior Software Engineer in Vienna building video players and SDKs for iOS/tvOS/watchOS and React Native, plus AI-driven media workflows. Expert in Vertex AI and Google Agent Development Kit (ADK). Lately I’ve been leaning into agentic engineering (since mid‑2025) as part of how I build.
+Staff Software Engineer in Vienna building video players and SDKs for iOS/tvOS/watchOS and React Native, plus AI-driven media workflows. Expert in Vertex AI and Google Agent Development Kit (ADK). Lately I’ve been leaning into agentic engineering (since mid‑2025) as part of how I build.
 
 ## Core Skills
 - Video Playback & Streaming (HLS, FairPlay Streaming)
@@ -13,7 +13,7 @@ Senior Software Engineer in Vienna building video players and SDKs for iOS/tvOS/
 ## Experience
 
 ### Bitmovin (Apr 2020 – Present)
-Senior Software Engineer
+Staff Software Engineer
 - AI-driven video workflows (Scene Analysis, recognition/segmentation)
 - Apple Player SDK (iOS/tvOS/watchOS)
 - React Native Player SDK lead
